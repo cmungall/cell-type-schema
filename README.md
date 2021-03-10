@@ -4,6 +4,8 @@ EXPERIMENTAL
 
 This is an attempt to seed a schema that can be used for cell types.
 
+ * [src/schema/celltype.yaml](https://github.com/cmungall/cell-type-schema/blob/main/src/schema/celltype.yaml)
+
 Why have a schema when we have a cell ontology?
 
 The ontology doesn't provide a structure that can be used to exchange
@@ -33,3 +35,7 @@ See various folders in repo
 ## generation of markdown docs
 
 https://cmungall.github.io/cell-type-schema/
+
+## TODO ENUMS
+
+One of the advantages of linkml is the elegant handling of semantic enums - we are not incorporating this yet.

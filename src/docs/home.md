@@ -1,4 +1,4 @@
 # Introduction
 
-about my_schema
+See https://github.com/cmungall/cell-type-schema
 
