@@ -1,0 +1,204 @@
+type CCN201810310
+  {
+    iD: AllenDendIdentifier
+    label: String
+    prefLabel: String
+    entityType: BDSHELPIdentifier
+    tYPE: TYPEEnum
+    propertyAssertions: AllenDendIdentifier
+    synonyms: [String]
+    function: FunctionEnum
+    cellSetPreferredAlias: String
+    originalLabel: String
+    cellSetLabel: String
+    cellSetAlignedAlias: String
+    cellSetAdditionalAliases: CellSetAdditionalAliasesEnum
+    cellSetAliasAssignee: CellSetAliasAssigneeEnum
+    cellSetAliasCitation: CellSetAliasCitationEnum
+    metadata: Identifier
+  }
+
+type CCN201810310Class
+  {
+    iD: AllenDendIdentifier
+    label: String
+    synonymsFromTaxonomy: [String]
+    curatedSynonyms: CuratedSynonymsEnum
+    comment: CellSetPreferredAliasIdentifier
+    classification: ClassificationEnum
+    classificationComment: ClassificationCommentEnum
+    classificationPub: ClassificationPubEnum
+  }
+
+type CCN201810310EquivalentReification
+  {
+    iD: AllenDendIdentifier
+    exemplar: AllenDendIdentifier
+  }
+
+type CCN201810310Markers
+  {
+  }
+
+type CCN201908210
+  {
+    iD: AllenDendIdentifier
+    label: String
+    prefLabel: String
+    entityType: BDSHELPIdentifier
+    tYPE: TYPEEnum
+    propertyAssertions: AllenDendIdentifier
+    synonyms: [String]
+    function: FunctionEnum
+    cellSetPreferredAlias: String
+    originalLabel: String
+    cellSetLabel: String
+    cellSetAlignedAlias: String
+    cellSetAdditionalAliases: CellSetAdditionalAliasesEnum
+    cellSetAliasAssignee: CellSetAliasAssigneeEnum
+    cellSetAliasCitation: CellSetAliasCitationEnum
+    metadata: Identifier
+  }
+
+type CCN201908210Class
+  {
+    iD: AllenDendIdentifier
+    label: String
+    synonymsFromTaxonomy: [String]
+    curatedSynonyms: CuratedSynonymsEnum
+    comment: CellSetPreferredAliasIdentifier
+    classification: ClassificationEnum
+    classificationComment: ClassificationCommentEnum
+    classificationPub: ClassificationPubEnum
+  }
+
+type CCN201908210EquivalentReification
+  {
+    iD: AllenDendIdentifier
+    exemplar: AllenDendIdentifier
+  }
+
+type CCN201908210Markers
+  {
+  }
+
+type CCN201908211
+  {
+    iD: AllenDendIdentifier
+    label: String
+    prefLabel: String
+    entityType: BDSHELPIdentifier
+    tYPE: TYPEEnum
+    propertyAssertions: AllenDendIdentifier
+    synonyms: [String]
+    function: FunctionEnum
+    cellSetPreferredAlias: String
+    originalLabel: String
+    cellSetLabel: String
+    cellSetAlignedAlias: String
+    cellSetAdditionalAliases: CellSetAdditionalAliasesEnum
+    cellSetAliasAssignee: CellSetAliasAssigneeEnum
+    cellSetAliasCitation: CellSetAliasCitationEnum
+    metadata: Identifier
+  }
+
+type CCN201908211Class
+  {
+    iD: AllenDendIdentifier
+    label: String
+    synonymsFromTaxonomy: [String]
+    curatedSynonyms: CuratedSynonymsEnum
+    comment: CellSetPreferredAliasIdentifier
+    classification: ClassificationEnum
+    classificationComment: ClassificationCommentEnum
+    classificationPub: ClassificationPubEnum
+  }
+
+type CCN201908211EquivalentReification
+  {
+    iD: AllenDendIdentifier
+    exemplar: AllenDendIdentifier
+  }
+
+type CCN201908211Markers
+  {
+  }
+
+type CCN202002013
+  {
+    iD: AllenDendIdentifier
+    label: String
+    prefLabel: String
+    entityType: BDSHELPIdentifier
+    tYPE: TYPEEnum
+    propertyAssertions: AllenDendIdentifier
+    synonyms: [String]
+    function: FunctionEnum
+    cellSetPreferredAlias: String
+    originalLabel: String
+    cellSetLabel: String
+    cellSetAlignedAlias: String
+    cellSetAdditionalAliases: CellSetAdditionalAliasesEnum
+    cellSetAliasAssignee: CellSetAliasAssigneeEnum
+    cellSetAliasCitation: CellSetAliasCitationEnum
+    metadata: Identifier
+  }
+
+type CCN202002013Class
+  {
+    iD: AllenDendIdentifier
+    label: String
+    synonymsFromTaxonomy: [String]
+    curatedSynonyms: CuratedSynonymsEnum
+    comment: CellSetPreferredAliasIdentifier
+    classification: ClassificationEnum
+    classificationComment: ClassificationCommentEnum
+    classificationPub: ClassificationPubEnum
+  }
+
+type CCN202002013EquivalentMarkers
+  {
+    iD: AllenDendIdentifier
+    cLASSTYPE: CLASSTYPEEnum
+    evidence: HttpIdentifier
+    grossCellType: CLIdentifier
+    brainRegion: UBERONIdentifier
+    marker1: EnsemblIdentifier
+    marker2: EnsemblIdentifier
+    marker3: EnsemblIdentifier
+    marker4: EnsemblIdentifier
+    marker5: EnsemblIdentifier
+    marker6: EnsemblIdentifier
+    marker7: EnsemblIdentifier
+    marker8: EnsemblIdentifier
+  }
+
+type CCN202002013EquivalentReification
+  {
+    iD: AllenDendIdentifier
+    exemplar: AllenDendIdentifier
+  }
+
+type CCN202002013Markers
+  {
+    iD: AllenDendIdentifier
+    tYPE: TYPEEnum
+    expresses: [EnsemblIdentifier]
+    evidence-Pub: DoiIdentifier
+  }
+
+type CS202002013MarkersDenormalized
+  {
+    taxonomyNodeID: String
+    clusterName: String
+    markersDelimited: [EnsemblIdentifier]
+  }
+
+type Ensmusg
+  {
+    iD: AllenDendIdentifier
+    tYPE: TYPEEnum
+    nAME: String
+  }
+
+

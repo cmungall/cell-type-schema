@@ -1,0 +1,1037 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix meta: <https://w3id.org/biolink/biolinkml/meta/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+meta:SubsetDefinition a owl:Class ;
+    rdfs:label "subset_definition" ;
+    skos:definition "the name and description of a subset" .
+
+<https://w3id.org/biolink/biolinkml/meta/types/Boolean> a owl:Class,
+        meta:TypeDefinition ;
+    rdfs:label "boolean" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange xsd:boolean ;
+            owl:onProperty meta:topValue ;
+            owl:qualifiedCardinality 1 ] ;
+    skos:definition "A binary (true or false) value" .
+
+<https://w3id.org/biolink/biolinkml/meta/types/Date> a owl:Class,
+        meta:TypeDefinition ;
+    rdfs:label "date" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange xsd:date ;
+            owl:onProperty meta:topValue ;
+            owl:qualifiedCardinality 1 ] ;
+    skos:definition "a date (year, month and day) in an idealized calendar" ;
+    skos:editorialNote "URI is dateTime because OWL reasoners don't work with straight date or time" .
+
+<https://w3id.org/biolink/biolinkml/meta/types/Datetime> a owl:Class,
+        meta:TypeDefinition ;
+    rdfs:label "datetime" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange xsd:dateTime ;
+            owl:onProperty meta:topValue ;
+            owl:qualifiedCardinality 1 ] ;
+    skos:definition "The combination of a date and time" .
+
+<https://w3id.org/biolink/biolinkml/meta/types/Decimal> a owl:Class,
+        meta:TypeDefinition ;
+    rdfs:label "decimal" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange xsd:decimal ;
+            owl:onProperty meta:topValue ;
+            owl:qualifiedCardinality 1 ] ;
+    skos:definition "A real number with arbitrary precision that conforms to the xsd:decimal specification" .
+
+<https://w3id.org/biolink/biolinkml/meta/types/Double> a owl:Class,
+        meta:TypeDefinition ;
+    rdfs:label "double" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty meta:topValue ;
+            owl:qualifiedCardinality 1 ] ;
+    skos:definition "A real number that conforms to the xsd:double specification" .
+
+<https://w3id.org/biolink/biolinkml/meta/types/Float> a owl:Class,
+        meta:TypeDefinition ;
+    rdfs:label "float" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange xsd:float ;
+            owl:onProperty meta:topValue ;
+            owl:qualifiedCardinality 1 ] ;
+    skos:definition "A real number that conforms to the xsd:float specification" .
+
+<https://w3id.org/biolink/biolinkml/meta/types/Integer> a owl:Class,
+        meta:TypeDefinition ;
+    rdfs:label "integer" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange xsd:integer ;
+            owl:onProperty meta:topValue ;
+            owl:qualifiedCardinality 1 ] ;
+    skos:definition "An integer" .
+
+<https://w3id.org/biolink/biolinkml/meta/types/Ncname> a owl:Class,
+        meta:TypeDefinition ;
+    rdfs:label "ncname" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty meta:topValue ;
+            owl:qualifiedCardinality 1 ] ;
+    skos:definition "Prefix part of CURIE" .
+
+<https://w3id.org/biolink/biolinkml/meta/types/Nodeidentifier> a owl:Class,
+        meta:TypeDefinition ;
+    rdfs:label "nodeidentifier" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange <http://www.w3.org/ns/shex#nonLiteral> ;
+            owl:onProperty meta:topValue ;
+            owl:qualifiedCardinality 1 ] ;
+    skos:definition "A URI, CURIE or BNODE that represents a node in a model." .
+
+<https://w3id.org/biolink/biolinkml/meta/types/Objectidentifier> a owl:Class,
+        meta:TypeDefinition ;
+    rdfs:label "objectidentifier" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange <http://www.w3.org/ns/shex#iri> ;
+            owl:onProperty meta:topValue ;
+            owl:qualifiedCardinality 1 ] ;
+    skos:definition "A URI or CURIE that represents an object in the model." ;
+    skos:note "Used for inheritence and type checking" .
+
+<https://w3id.org/biolink/biolinkml/meta/types/Time> a owl:Class,
+        meta:TypeDefinition ;
+    rdfs:label "time" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange xsd:dateTime ;
+            owl:onProperty meta:topValue ;
+            owl:qualifiedCardinality 1 ] ;
+    skos:definition "A time object represents a (local) time of day, independent of any particular day" ;
+    skos:editorialNote "URI is dateTime because OWL reasoners don't work with straight date or time" .
+
+<https://w3id.org/biolink/biolinkml/meta/types/Uri> a owl:Class,
+        meta:TypeDefinition ;
+    rdfs:label "uri" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange xsd:anyURI ;
+            owl:onProperty meta:topValue ;
+            owl:qualifiedCardinality 1 ] ;
+    skos:definition "a complete URI" .
+
+<https://w3id.org/biolink/biolinkml/meta/types/Uriorcurie> a owl:Class,
+        meta:TypeDefinition ;
+    rdfs:label "uriorcurie" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange xsd:anyURI ;
+            owl:onProperty meta:topValue ;
+            owl:qualifiedCardinality 1 ] ;
+    skos:definition "a URI or a CURIE" .
+
+<https://w3id.org/example> a owl:Ontology ;
+    rdfs:label "example" ;
+    dcterms:license "https://creativecommons.org/publicdomain/zero/1.0/" ;
+    skos:definition "example" ;
+    meta:generation_date "2021-03-09 17:21" ;
+    meta:metamodel_version "1.7.0" ;
+    meta:source_file "celltype.yaml" ;
+    meta:source_file_date "Tue Mar  9 17:20:33 2021" ;
+    meta:source_file_size 9992 .
+
+<https://w3id.org/exampleCCN201810310> a owl:Class,
+        meta:ClassDefinition ;
+    rdfs:label "CCN201810310" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/biolink/biolinkml/meta/types/String> ;
+            owl:onProperty <https://w3id.org/examplecell_set_aligned_alias> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/exampleAllenDendIdentifier> ;
+            owl:onProperty <https://w3id.org/exampleID> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/biolink/biolinkml/meta/types/String> ;
+            owl:onProperty <https://w3id.org/exampleoriginal_label> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/exampleAllenDendIdentifier> ;
+            owl:onProperty <https://w3id.org/exampleProperty_Assertions> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/biolink/biolinkml/meta/types/String> ;
+            owl:onProperty <https://w3id.org/exampleLabel> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <http://UNKNOWN.org/cell_set_alias_assignee_enum> ;
+            owl:onProperty <https://w3id.org/examplecell_set_alias_assignee> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <http://UNKNOWN.org/cell_set_alias_citation_enum> ;
+            owl:onProperty <https://w3id.org/examplecell_set_alias_citation> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/exampleBDSHELPIdentifier> ;
+            owl:onProperty <https://w3id.org/exampleEntity_Type> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <http://UNKNOWN.org/TYPE_enum> ;
+            owl:onProperty <https://w3id.org/exampleTYPE> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/biolink/biolinkml/meta/types/String> ;
+            owl:onProperty <https://w3id.org/examplePrefLabel> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <http://UNKNOWN.org/cell_set_additional_aliases_enum> ;
+            owl:onProperty <https://w3id.org/examplecell_set_additional_aliases> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/exampleIdentifier> ;
+            owl:onProperty <https://w3id.org/exampleMetadata> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/biolink/biolinkml/meta/types/String> ;
+            owl:onProperty <https://w3id.org/examplecell_set_label> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://w3id.org/biolink/biolinkml/meta/types/String> ;
+            owl:onProperty <https://w3id.org/exampleSynonyms> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/biolink/biolinkml/meta/types/String> ;
+            owl:onProperty <https://w3id.org/examplecell_set_preferred_alias> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <http://UNKNOWN.org/Function_enum> ;
+            owl:onProperty <https://w3id.org/exampleFunction> ] .
+
+<https://w3id.org/exampleCCN201810310Class> a owl:Class,
+        meta:ClassDefinition ;
+    rdfs:label "CCN201810310_class" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <http://UNKNOWN.org/Classification_pub_enum> ;
+            owl:onProperty <https://w3id.org/exampleClassification_pub> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/exampleAllenDendIdentifier> ;
+            owl:onProperty <https://w3id.org/exampleID> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/exampleCellSetPreferredAliasIdentifier> ;
+            owl:onProperty <https://w3id.org/exampleComment> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://w3id.org/biolink/biolinkml/meta/types/String> ;
+            owl:onProperty <https://w3id.org/exampleSynonyms_from_taxonomy> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <http://UNKNOWN.org/Curated_synonyms_enum> ;
+            owl:onProperty <https://w3id.org/exampleCurated_synonyms> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/biolink/biolinkml/meta/types/String> ;
+            owl:onProperty <https://w3id.org/exampleLabel> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <http://UNKNOWN.org/Classification_comment_enum> ;
+            owl:onProperty <https://w3id.org/exampleClassification_comment> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <http://UNKNOWN.org/Classification_enum> ;
+            owl:onProperty <https://w3id.org/exampleClassification> ] .
+
+<https://w3id.org/exampleCCN201810310EquivalentReification> a owl:Class,
+        meta:ClassDefinition ;
+    rdfs:label "CCN201810310_equivalent_reification" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/exampleAllenDendIdentifier> ;
+            owl:onProperty <https://w3id.org/exampleID> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/exampleAllenDendIdentifier> ;
+            owl:onProperty <https://w3id.org/exampleExemplar> ] .
+
+<https://w3id.org/exampleCCN201810310Markers> a owl:Class,
+        meta:ClassDefinition ;
+    rdfs:label "CCN201810310_markers" .
+
+<https://w3id.org/exampleCCN201908210> a owl:Class,
+        meta:ClassDefinition ;
+    rdfs:label "CCN201908210" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/biolink/biolinkml/meta/types/String> ;
+            owl:onProperty <https://w3id.org/examplecell_set_aligned_alias> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://w3id.org/biolink/biolinkml/meta/types/String> ;
+            owl:onProperty <https://w3id.org/exampleSynonyms> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/exampleIdentifier> ;
+            owl:onProperty <https://w3id.org/exampleMetadata> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/exampleBDSHELPIdentifier> ;
+            owl:onProperty <https://w3id.org/exampleEntity_Type> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/biolink/biolinkml/meta/types/String> ;
+            owl:onProperty <https://w3id.org/exampleLabel> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/exampleAllenDendIdentifier> ;
+            owl:onProperty <https://w3id.org/exampleID> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <http://UNKNOWN.org/Function_enum> ;
+            owl:onProperty <https://w3id.org/exampleFunction> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <http://UNKNOWN.org/TYPE_enum> ;
+            owl:onProperty <https://w3id.org/exampleTYPE> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/biolink/biolinkml/meta/types/String> ;
+            owl:onProperty <https://w3id.org/exampleoriginal_label> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <http://UNKNOWN.org/cell_set_additional_aliases_enum> ;
+            owl:onProperty <https://w3id.org/examplecell_set_additional_aliases> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/biolink/biolinkml/meta/types/String> ;
+            owl:onProperty <https://w3id.org/examplecell_set_preferred_alias> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/biolink/biolinkml/meta/types/String> ;
+            owl:onProperty <https://w3id.org/examplecell_set_label> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <http://UNKNOWN.org/cell_set_alias_citation_enum> ;
+            owl:onProperty <https://w3id.org/examplecell_set_alias_citation> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/exampleAllenDendIdentifier> ;
+            owl:onProperty <https://w3id.org/exampleProperty_Assertions> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <http://UNKNOWN.org/cell_set_alias_assignee_enum> ;
+            owl:onProperty <https://w3id.org/examplecell_set_alias_assignee> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/biolink/biolinkml/meta/types/String> ;
+            owl:onProperty <https://w3id.org/examplePrefLabel> ] .
+
+<https://w3id.org/exampleCCN201908210Class> a owl:Class,
+        meta:ClassDefinition ;
+    rdfs:label "CCN201908210_class" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/exampleCellSetPreferredAliasIdentifier> ;
+            owl:onProperty <https://w3id.org/exampleComment> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <http://UNKNOWN.org/Classification_enum> ;
+            owl:onProperty <https://w3id.org/exampleClassification> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://w3id.org/biolink/biolinkml/meta/types/String> ;
+            owl:onProperty <https://w3id.org/exampleSynonyms_from_taxonomy> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/exampleAllenDendIdentifier> ;
+            owl:onProperty <https://w3id.org/exampleID> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <http://UNKNOWN.org/Classification_comment_enum> ;
+            owl:onProperty <https://w3id.org/exampleClassification_comment> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <http://UNKNOWN.org/Classification_pub_enum> ;
+            owl:onProperty <https://w3id.org/exampleClassification_pub> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/biolink/biolinkml/meta/types/String> ;
+            owl:onProperty <https://w3id.org/exampleLabel> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <http://UNKNOWN.org/Curated_synonyms_enum> ;
+            owl:onProperty <https://w3id.org/exampleCurated_synonyms> ] .
+
+<https://w3id.org/exampleCCN201908210EquivalentReification> a owl:Class,
+        meta:ClassDefinition ;
+    rdfs:label "CCN201908210_equivalent_reification" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/exampleAllenDendIdentifier> ;
+            owl:onProperty <https://w3id.org/exampleExemplar> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/exampleAllenDendIdentifier> ;
+            owl:onProperty <https://w3id.org/exampleID> ] .
+
+<https://w3id.org/exampleCCN201908210Markers> a owl:Class,
+        meta:ClassDefinition ;
+    rdfs:label "CCN201908210_markers" .
+
+<https://w3id.org/exampleCCN201908211> a owl:Class,
+        meta:ClassDefinition ;
+    rdfs:label "CCN201908211" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/biolink/biolinkml/meta/types/String> ;
+            owl:onProperty <https://w3id.org/examplePrefLabel> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/biolink/biolinkml/meta/types/String> ;
+            owl:onProperty <https://w3id.org/exampleoriginal_label> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/exampleBDSHELPIdentifier> ;
+            owl:onProperty <https://w3id.org/exampleEntity_Type> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://w3id.org/biolink/biolinkml/meta/types/String> ;
+            owl:onProperty <https://w3id.org/exampleSynonyms> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <http://UNKNOWN.org/TYPE_enum> ;
+            owl:onProperty <https://w3id.org/exampleTYPE> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/exampleAllenDendIdentifier> ;
+            owl:onProperty <https://w3id.org/exampleID> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/biolink/biolinkml/meta/types/String> ;
+            owl:onProperty <https://w3id.org/examplecell_set_preferred_alias> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <http://UNKNOWN.org/cell_set_alias_citation_enum> ;
+            owl:onProperty <https://w3id.org/examplecell_set_alias_citation> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/exampleAllenDendIdentifier> ;
+            owl:onProperty <https://w3id.org/exampleProperty_Assertions> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <http://UNKNOWN.org/cell_set_alias_assignee_enum> ;
+            owl:onProperty <https://w3id.org/examplecell_set_alias_assignee> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <http://UNKNOWN.org/cell_set_additional_aliases_enum> ;
+            owl:onProperty <https://w3id.org/examplecell_set_additional_aliases> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/biolink/biolinkml/meta/types/String> ;
+            owl:onProperty <https://w3id.org/exampleLabel> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/exampleIdentifier> ;
+            owl:onProperty <https://w3id.org/exampleMetadata> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/biolink/biolinkml/meta/types/String> ;
+            owl:onProperty <https://w3id.org/examplecell_set_label> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/biolink/biolinkml/meta/types/String> ;
+            owl:onProperty <https://w3id.org/examplecell_set_aligned_alias> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <http://UNKNOWN.org/Function_enum> ;
+            owl:onProperty <https://w3id.org/exampleFunction> ] .
+
+<https://w3id.org/exampleCCN201908211Class> a owl:Class,
+        meta:ClassDefinition ;
+    rdfs:label "CCN201908211_class" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <http://UNKNOWN.org/Classification_pub_enum> ;
+            owl:onProperty <https://w3id.org/exampleClassification_pub> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <http://UNKNOWN.org/Classification_enum> ;
+            owl:onProperty <https://w3id.org/exampleClassification> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <http://UNKNOWN.org/Classification_comment_enum> ;
+            owl:onProperty <https://w3id.org/exampleClassification_comment> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/biolink/biolinkml/meta/types/String> ;
+            owl:onProperty <https://w3id.org/exampleLabel> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/exampleAllenDendIdentifier> ;
+            owl:onProperty <https://w3id.org/exampleID> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <http://UNKNOWN.org/Curated_synonyms_enum> ;
+            owl:onProperty <https://w3id.org/exampleCurated_synonyms> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/exampleCellSetPreferredAliasIdentifier> ;
+            owl:onProperty <https://w3id.org/exampleComment> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://w3id.org/biolink/biolinkml/meta/types/String> ;
+            owl:onProperty <https://w3id.org/exampleSynonyms_from_taxonomy> ] .
+
+<https://w3id.org/exampleCCN201908211EquivalentReification> a owl:Class,
+        meta:ClassDefinition ;
+    rdfs:label "CCN201908211_equivalent_reification" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/exampleAllenDendIdentifier> ;
+            owl:onProperty <https://w3id.org/exampleExemplar> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/exampleAllenDendIdentifier> ;
+            owl:onProperty <https://w3id.org/exampleID> ] .
+
+<https://w3id.org/exampleCCN201908211Markers> a owl:Class,
+        meta:ClassDefinition ;
+    rdfs:label "CCN201908211_markers" .
+
+<https://w3id.org/exampleCCN202002013> a owl:Class,
+        meta:ClassDefinition ;
+    rdfs:label "CCN202002013" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/exampleIdentifier> ;
+            owl:onProperty <https://w3id.org/exampleMetadata> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/exampleAllenDendIdentifier> ;
+            owl:onProperty <https://w3id.org/exampleID> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <http://UNKNOWN.org/Function_enum> ;
+            owl:onProperty <https://w3id.org/exampleFunction> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/biolink/biolinkml/meta/types/String> ;
+            owl:onProperty <https://w3id.org/examplecell_set_preferred_alias> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/exampleAllenDendIdentifier> ;
+            owl:onProperty <https://w3id.org/exampleProperty_Assertions> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/biolink/biolinkml/meta/types/String> ;
+            owl:onProperty <https://w3id.org/examplePrefLabel> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/biolink/biolinkml/meta/types/String> ;
+            owl:onProperty <https://w3id.org/examplecell_set_label> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <http://UNKNOWN.org/TYPE_enum> ;
+            owl:onProperty <https://w3id.org/exampleTYPE> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/biolink/biolinkml/meta/types/String> ;
+            owl:onProperty <https://w3id.org/exampleLabel> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <http://UNKNOWN.org/cell_set_alias_citation_enum> ;
+            owl:onProperty <https://w3id.org/examplecell_set_alias_citation> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <http://UNKNOWN.org/cell_set_additional_aliases_enum> ;
+            owl:onProperty <https://w3id.org/examplecell_set_additional_aliases> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/biolink/biolinkml/meta/types/String> ;
+            owl:onProperty <https://w3id.org/exampleoriginal_label> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/exampleBDSHELPIdentifier> ;
+            owl:onProperty <https://w3id.org/exampleEntity_Type> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/biolink/biolinkml/meta/types/String> ;
+            owl:onProperty <https://w3id.org/examplecell_set_aligned_alias> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://w3id.org/biolink/biolinkml/meta/types/String> ;
+            owl:onProperty <https://w3id.org/exampleSynonyms> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <http://UNKNOWN.org/cell_set_alias_assignee_enum> ;
+            owl:onProperty <https://w3id.org/examplecell_set_alias_assignee> ] .
+
+<https://w3id.org/exampleCCN202002013Class> a owl:Class,
+        meta:ClassDefinition ;
+    rdfs:label "CCN202002013_class" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom <https://w3id.org/biolink/biolinkml/meta/types/String> ;
+            owl:onProperty <https://w3id.org/exampleSynonyms_from_taxonomy> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <http://UNKNOWN.org/Curated_synonyms_enum> ;
+            owl:onProperty <https://w3id.org/exampleCurated_synonyms> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <http://UNKNOWN.org/Classification_comment_enum> ;
+            owl:onProperty <https://w3id.org/exampleClassification_comment> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <http://UNKNOWN.org/Classification_pub_enum> ;
+            owl:onProperty <https://w3id.org/exampleClassification_pub> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/exampleAllenDendIdentifier> ;
+            owl:onProperty <https://w3id.org/exampleID> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/exampleCellSetPreferredAliasIdentifier> ;
+            owl:onProperty <https://w3id.org/exampleComment> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <http://UNKNOWN.org/Classification_enum> ;
+            owl:onProperty <https://w3id.org/exampleClassification> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/biolink/biolinkml/meta/types/String> ;
+            owl:onProperty <https://w3id.org/exampleLabel> ] .
+
+<https://w3id.org/exampleCCN202002013EquivalentMarkers> a owl:Class,
+        meta:ClassDefinition ;
+    rdfs:label "CCN202002013_equivalent_markers" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <http://UNKNOWN.org/CLASS_TYPE_enum> ;
+            owl:onProperty <https://w3id.org/exampleCLASS_TYPE> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/exampleAllenDendIdentifier> ;
+            owl:onProperty <https://w3id.org/exampleID> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/exampleEnsemblIdentifier> ;
+            owl:onProperty <https://w3id.org/exampleMarker8> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/exampleEnsemblIdentifier> ;
+            owl:onProperty <https://w3id.org/exampleMarker3> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/exampleEnsemblIdentifier> ;
+            owl:onProperty <https://w3id.org/exampleMarker6> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/exampleHttpIdentifier> ;
+            owl:onProperty <https://w3id.org/exampleEvidence> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/exampleEnsemblIdentifier> ;
+            owl:onProperty <https://w3id.org/exampleMarker1> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/exampleEnsemblIdentifier> ;
+            owl:onProperty <https://w3id.org/exampleMarker4> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/exampleEnsemblIdentifier> ;
+            owl:onProperty <https://w3id.org/exampleMarker5> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/exampleEnsemblIdentifier> ;
+            owl:onProperty <https://w3id.org/exampleMarker2> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/exampleCLIdentifier> ;
+            owl:onProperty <https://w3id.org/exampleGross_cell_type> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/exampleUBERONIdentifier> ;
+            owl:onProperty <https://w3id.org/exampleBrain_region> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/exampleEnsemblIdentifier> ;
+            owl:onProperty <https://w3id.org/exampleMarker7> ] .
+
+<https://w3id.org/exampleCCN202002013EquivalentReification> a owl:Class,
+        meta:ClassDefinition ;
+    rdfs:label "CCN202002013_equivalent_reification" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/exampleAllenDendIdentifier> ;
+            owl:onProperty <https://w3id.org/exampleID> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/exampleAllenDendIdentifier> ;
+            owl:onProperty <https://w3id.org/exampleExemplar> ] .
+
+<https://w3id.org/exampleCCN202002013Markers> a owl:Class,
+        meta:ClassDefinition ;
+    rdfs:label "CCN202002013_markers" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom <https://w3id.org/exampleEnsemblIdentifier> ;
+            owl:onProperty <https://w3id.org/exampleExpresses> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/exampleDoiIdentifier> ;
+            owl:onProperty <https://w3id.org/exampleEvidence_-_pub> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/exampleAllenDendIdentifier> ;
+            owl:onProperty <https://w3id.org/exampleID> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <http://UNKNOWN.org/TYPE_enum> ;
+            owl:onProperty <https://w3id.org/exampleTYPE> ] .
+
+<https://w3id.org/exampleCS202002013MarkersDenormalized> a owl:Class,
+        meta:ClassDefinition ;
+    rdfs:label "CS202002013_markers_denormalized" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/biolink/biolinkml/meta/types/String> ;
+            owl:onProperty <https://w3id.org/exampleclusterName> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/biolink/biolinkml/meta/types/String> ;
+            owl:onProperty <https://w3id.org/exampleTaxonomy_node_ID> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://w3id.org/exampleEnsemblIdentifier> ;
+            owl:onProperty <https://w3id.org/exampleMarkers_Delimited> ] .
+
+<https://w3id.org/exampleEnsmusg> a owl:Class,
+        meta:ClassDefinition ;
+    rdfs:label "ensmusg" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <http://UNKNOWN.org/TYPE_enum> ;
+            owl:onProperty <https://w3id.org/exampleTYPE> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/exampleAllenDendIdentifier> ;
+            owl:onProperty <https://w3id.org/exampleID> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <https://w3id.org/biolink/biolinkml/meta/types/String> ;
+            owl:onProperty <https://w3id.org/exampleNAME> ] .
+
+<https://w3id.org/exampleOwlIdentifier> a owl:Class,
+        meta:TypeDefinition ;
+    rdfs:label "owl identifier" ;
+    rdfs:subClassOf <https://w3id.org/biolink/biolinkml/meta/types/String> .
+
+<https://w3id.org/exampleSOIdentifier> a owl:Class,
+        meta:TypeDefinition ;
+    rdfs:label "SO identifier" ;
+    rdfs:subClassOf <https://w3id.org/biolink/biolinkml/meta/types/String> .
+
+<https://w3id.org/exampleBrain_region> a owl:ObjectProperty,
+        meta:SlotDefinition ;
+    rdfs:label "Brain_region" ;
+    rdfs:range <https://w3id.org/exampleUBERONIdentifier> ;
+    meta:examples "Example(value='UBERON:0001384', description=None)" .
+
+<https://w3id.org/exampleCLASS_TYPE> a owl:ObjectProperty,
+        meta:SlotDefinition ;
+    rdfs:label "CLASS_TYPE" ;
+    rdfs:range <http://UNKNOWN.org/CLASS_TYPE_enum> ;
+    meta:examples "Example(value='equivalent', description=None)" .
+
+<https://w3id.org/exampleEvidence> a owl:ObjectProperty,
+        meta:SlotDefinition ;
+    rdfs:label "Evidence" ;
+    rdfs:range <https://w3id.org/exampleHttpIdentifier> ;
+    meta:examples "Example(value='http://www.semanticweb.org/brain_data_standards/AllenDend_CS202002013_88', description=None)" .
+
+<https://w3id.org/exampleEvidence_-_pub> a owl:ObjectProperty,
+        meta:SlotDefinition ;
+    rdfs:label "Evidence - pub" ;
+    rdfs:range <https://w3id.org/exampleDoiIdentifier> ;
+    meta:examples "Example(value='doi:10.1101/2020.09.23.308932', description=None)" .
+
+<https://w3id.org/exampleExpresses> a owl:ObjectProperty,
+        meta:SlotDefinition ;
+    rdfs:label "Expresses" ;
+    rdfs:range <https://w3id.org/exampleEnsemblIdentifier> ;
+    meta:examples "Example(value='ensembl:ENSMUSG00000049796|ensembl:ENSMUSG00000022656|ensembl:ENSMUSG00000020099', description=None)" .
+
+<https://w3id.org/exampleGross_cell_type> a owl:ObjectProperty,
+        meta:SlotDefinition ;
+    rdfs:label "Gross_cell_type" ;
+    rdfs:range <https://w3id.org/exampleCLIdentifier> ;
+    meta:examples "Example(value='CL:0000679', description=None)" .
+
+<https://w3id.org/exampleMarker1> a owl:ObjectProperty,
+        meta:SlotDefinition ;
+    rdfs:label "Marker1" ;
+    rdfs:range <https://w3id.org/exampleEnsemblIdentifier> ;
+    meta:examples "Example(value='ensembl:ENSMUSG00000047907', description=None)" .
+
+<https://w3id.org/exampleMarker2> a owl:ObjectProperty,
+        meta:SlotDefinition ;
+    rdfs:label "Marker2" ;
+    rdfs:range <https://w3id.org/exampleEnsemblIdentifier> ;
+    meta:examples "Example(value='ensembl:ENSMUSG00000004151', description=None)" .
+
+<https://w3id.org/exampleMarker3> a owl:ObjectProperty,
+        meta:SlotDefinition ;
+    rdfs:label "Marker3" ;
+    rdfs:range <https://w3id.org/exampleEnsemblIdentifier> ;
+    meta:examples "Example(value='ensembl:ENSMUSG00000026344', description=None)" .
+
+<https://w3id.org/exampleMarker4> a owl:ObjectProperty,
+        meta:SlotDefinition ;
+    rdfs:label "Marker4" ;
+    rdfs:range <https://w3id.org/exampleEnsemblIdentifier> ;
+    meta:examples "Example(value='ensembl:ENSMUSG00000035258', description=None)" .
+
+<https://w3id.org/exampleMarker5> a owl:ObjectProperty,
+        meta:SlotDefinition ;
+    rdfs:label "Marker5" ;
+    rdfs:range <https://w3id.org/exampleEnsemblIdentifier> ;
+    meta:examples "Example(value='ensembl:ENSMUSG00000004151', description=None)" .
+
+<https://w3id.org/exampleMarker6> a owl:ObjectProperty,
+        meta:SlotDefinition ;
+    rdfs:label "Marker6" ;
+    rdfs:range <https://w3id.org/exampleEnsemblIdentifier> ;
+    meta:examples "Example(value='ensembl:ENSMUSG00000096972', description=None)" .
+
+<https://w3id.org/exampleMarker7> a owl:ObjectProperty,
+        meta:SlotDefinition ;
+    rdfs:label "Marker7" ;
+    rdfs:range <https://w3id.org/exampleEnsemblIdentifier> ;
+    meta:examples "Example(value='ensembl:ENSMUSG00000055214', description=None)" .
+
+<https://w3id.org/exampleMarker8> a owl:ObjectProperty,
+        meta:SlotDefinition ;
+    rdfs:label "Marker8" ;
+    rdfs:range <https://w3id.org/exampleEnsemblIdentifier> ;
+    meta:examples "Example(value='ensembl:ENSMUSG00000040452', description=None)" .
+
+<https://w3id.org/exampleMarkers_Delimited> a owl:ObjectProperty,
+        meta:SlotDefinition ;
+    rdfs:label "Markers Delimited" ;
+    rdfs:range <https://w3id.org/exampleEnsemblIdentifier> ;
+    meta:examples "Example(value='ensembl:ENSMUSG00000058897|ensembl:ENSMUSG00000022656|ensembl:ENSMUSG00000044288|ensembl:ENSMUSG00000049796|ensembl:ENSMUSG00000020099', description=None)" .
+
+<https://w3id.org/exampleNAME> a owl:ObjectProperty,
+        meta:SlotDefinition ;
+    rdfs:label "NAME" ;
+    rdfs:range <https://w3id.org/biolink/biolinkml/meta/types/String> ;
+    meta:examples "Example(value='Gm23444', description=None)" .
+
+<https://w3id.org/exampleTaxonomy_node_ID> a owl:ObjectProperty,
+        meta:SlotDefinition ;
+    rdfs:label "Taxonomy_node_ID" ;
+    rdfs:range <https://w3id.org/biolink/biolinkml/meta/types/String> ;
+    meta:examples "Example(value='CS202002013_14', description=None)" .
+
+<https://w3id.org/exampleclusterName> a owl:ObjectProperty,
+        meta:SlotDefinition ;
+    rdfs:label "clusterName" ;
+    rdfs:range <https://w3id.org/biolink/biolinkml/meta/types/String> ;
+    meta:examples "Example(value='Vip Sncg', description=None)" .
+
+<https://w3id.org/exampleCLIdentifier> a owl:Class,
+        meta:TypeDefinition ;
+    rdfs:label "CL identifier" ;
+    rdfs:subClassOf <https://w3id.org/biolink/biolinkml/meta/types/String> .
+
+<https://w3id.org/exampleDoiIdentifier> a owl:Class,
+        meta:TypeDefinition ;
+    rdfs:label "doi identifier" ;
+    rdfs:subClassOf <https://w3id.org/biolink/biolinkml/meta/types/String> .
+
+<https://w3id.org/exampleHttpIdentifier> a owl:Class,
+        meta:TypeDefinition ;
+    rdfs:label "http identifier" ;
+    rdfs:subClassOf <https://w3id.org/biolink/biolinkml/meta/types/String> .
+
+<https://w3id.org/exampleUBERONIdentifier> a owl:Class,
+        meta:TypeDefinition ;
+    rdfs:label "UBERON identifier" ;
+    rdfs:subClassOf <https://w3id.org/biolink/biolinkml/meta/types/String> .
+
+<https://w3id.org/exampleClassification> a owl:ObjectProperty,
+        meta:SlotDefinition ;
+    rdfs:label "Classification" ;
+    rdfs:range <http://UNKNOWN.org/Classification_enum> .
+
+<https://w3id.org/exampleClassification_comment> a owl:ObjectProperty,
+        meta:SlotDefinition ;
+    rdfs:label "Classification_comment" ;
+    rdfs:range <http://UNKNOWN.org/Classification_comment_enum> .
+
+<https://w3id.org/exampleClassification_pub> a owl:ObjectProperty,
+        meta:SlotDefinition ;
+    rdfs:label "Classification_pub" ;
+    rdfs:range <http://UNKNOWN.org/Classification_pub_enum> .
+
+<https://w3id.org/exampleComment> a owl:ObjectProperty,
+        meta:SlotDefinition ;
+    rdfs:label "Comment" ;
+    rdfs:range <https://w3id.org/exampleCellSetPreferredAliasIdentifier> ;
+    meta:examples "Example(value=\"cell_set_preferred_alias:Microglia Siglech ; original_label:Microglia Siglech ; cell_set_label:VISp_ALM 133 ; cell_set_aligned_alias:Microglia ; cell_set_additional_aliases:''\", description=None)" .
+
+<https://w3id.org/exampleCurated_synonyms> a owl:ObjectProperty,
+        meta:SlotDefinition ;
+    rdfs:label "Curated_synonyms" ;
+    rdfs:range <http://UNKNOWN.org/Curated_synonyms_enum> .
+
+<https://w3id.org/exampleEntity_Type> a owl:ObjectProperty,
+        meta:SlotDefinition ;
+    rdfs:label "Entity Type" ;
+    rdfs:range <https://w3id.org/exampleBDSHELPIdentifier> ;
+    meta:examples "Example(value='BDSHELP:Cluster', description=None)" .
+
+<https://w3id.org/exampleExemplar> a owl:ObjectProperty,
+        meta:SlotDefinition ;
+    rdfs:label "Exemplar" ;
+    rdfs:range <https://w3id.org/exampleAllenDendIdentifier> ;
+    meta:examples "Example(value='AllenDend:CS201810310_133', description=None)" .
+
+<https://w3id.org/exampleFunction> a owl:ObjectProperty,
+        meta:SlotDefinition ;
+    rdfs:label "Function" ;
+    rdfs:range <http://UNKNOWN.org/Function_enum> .
+
+<https://w3id.org/exampleMetadata> a owl:ObjectProperty,
+        meta:SlotDefinition ;
+    rdfs:label "Metadata" ;
+    rdfs:range <https://w3id.org/exampleIdentifier> ;
+    meta:examples "Example(value='{\"label\": \"Microglia Siglech\", \"members\": 1, \"height\": 0, \"leaf\": true, \"edgePar.col\": \"#000000\", \"edgePar.lwd\": 2, \"edgePar.conf\": 1, \"nodePar.lab.cex\": 0.7, \"nodePar.pch\": 19, \"nodePar.lab.col\": \"#598069\", \"nodePar.cex\": 0.5, \"nodePar.col\": \"#598069\", \"value\": 133, \"cell_set_accession\": \"CS201810310_133\", \"original_label\": \"Microglia Siglech\", \"cell_set_label\": \"VISp_ALM 133\", \"cell_set_alias\": \"Microglia Siglech\", \"cell_set_alt_alias\": \"Microglia\", \"cell_set_preferred_alias\": \"Microglia Siglech\", \"cell_set_aligned_alias\": \"Microglia\", \"cell_set_additional_aliases\": \"\", \"cell_set_structure\": \"neocortex\", \"cell_set_ontology_tag\": \"UBERON_0001950\", \"cell_set_alias_assignee\": \"Bosiljka Tasic\", \"cell_set_alias_citation\": \"10.1038/s41586-018-0654-5\", \"taxonomy_id\": \"CCN201810310\", \"_row\": \"Microglia Siglech\", \"is_leaf\": true}', description=None)" .
+
+<https://w3id.org/examplePrefLabel> a owl:ObjectProperty,
+        meta:SlotDefinition ;
+    rdfs:label "PrefLabel" ;
+    rdfs:range <https://w3id.org/biolink/biolinkml/meta/types/String> ;
+    meta:examples "Example(value='Microglia Siglech - CS201810310_133', description=None)" .
+
+<https://w3id.org/exampleProperty_Assertions> a owl:ObjectProperty,
+        meta:SlotDefinition ;
+    rdfs:label "Property Assertions" ;
+    rdfs:range <https://w3id.org/exampleAllenDendIdentifier> ;
+    meta:examples "Example(value='AllenDend:CS201810310_253', description=None)" .
+
+<https://w3id.org/exampleSynonyms> a owl:ObjectProperty,
+        meta:SlotDefinition ;
+    rdfs:label "Synonyms" ;
+    rdfs:range <https://w3id.org/biolink/biolinkml/meta/types/String> ;
+    meta:examples "Example(value='Microglia Siglech|Microglia', description=None)" .
+
+<https://w3id.org/exampleSynonyms_from_taxonomy> a owl:ObjectProperty,
+        meta:SlotDefinition ;
+    rdfs:label "Synonyms_from_taxonomy" ;
+    rdfs:range <https://w3id.org/biolink/biolinkml/meta/types/String> ;
+    meta:examples "Example(value='Microglia|VISp_ALM 133|Microglia Siglech', description=None)" .
+
+<https://w3id.org/examplecell_set_additional_aliases> a owl:ObjectProperty,
+        meta:SlotDefinition ;
+    rdfs:label "cell_set_additional_aliases" ;
+    rdfs:range <http://UNKNOWN.org/cell_set_additional_aliases_enum> ;
+    meta:examples "Example(value='Cajal Retzius', description=None)" .
+
+<https://w3id.org/examplecell_set_alias_assignee> a owl:ObjectProperty,
+        meta:SlotDefinition ;
+    rdfs:label "cell_set_alias_assignee" ;
+    rdfs:range <http://UNKNOWN.org/cell_set_alias_assignee_enum> ;
+    meta:examples "Example(value='Bosiljka Tasic', description=None)" .
+
+<https://w3id.org/examplecell_set_alias_citation> a owl:ObjectProperty,
+        meta:SlotDefinition ;
+    rdfs:label "cell_set_alias_citation" ;
+    rdfs:range <http://UNKNOWN.org/cell_set_alias_citation_enum> ;
+    meta:examples "Example(value='10.1038/s41586-018-0654-5', description=None)" .
+
+<https://w3id.org/examplecell_set_aligned_alias> a owl:ObjectProperty,
+        meta:SlotDefinition ;
+    rdfs:label "cell_set_aligned_alias" ;
+    rdfs:range <https://w3id.org/biolink/biolinkml/meta/types/String> ;
+    meta:examples "Example(value='Microglia', description=None)" .
+
+<https://w3id.org/examplecell_set_label> a owl:ObjectProperty,
+        meta:SlotDefinition ;
+    rdfs:label "cell_set_label" ;
+    rdfs:range <https://w3id.org/biolink/biolinkml/meta/types/String> ;
+    meta:examples "Example(value='VISp_ALM 133', description=None)" .
+
+<https://w3id.org/examplecell_set_preferred_alias> a owl:ObjectProperty,
+        meta:SlotDefinition ;
+    rdfs:label "cell_set_preferred_alias" ;
+    rdfs:range <https://w3id.org/biolink/biolinkml/meta/types/String> ;
+    meta:examples "Example(value='Microglia Siglech', description=None)" .
+
+<https://w3id.org/exampleoriginal_label> a owl:ObjectProperty,
+        meta:SlotDefinition ;
+    rdfs:label "original_label" ;
+    rdfs:range <https://w3id.org/biolink/biolinkml/meta/types/String> ;
+    meta:examples "Example(value='Microglia Siglech', description=None)" .
+
+<https://w3id.org/exampleBDSHELPIdentifier> a owl:Class,
+        meta:TypeDefinition ;
+    rdfs:label "BDSHELP identifier" ;
+    rdfs:subClassOf <https://w3id.org/biolink/biolinkml/meta/types/String> .
+
+<https://w3id.org/exampleCellSetPreferredAliasIdentifier> a owl:Class,
+        meta:TypeDefinition ;
+    rdfs:label "cell_set_preferred_alias identifier" ;
+    rdfs:subClassOf <https://w3id.org/biolink/biolinkml/meta/types/String> .
+
+<https://w3id.org/exampleIdentifier> a owl:Class,
+        meta:TypeDefinition ;
+    rdfs:label "identifier" ;
+    rdfs:subClassOf <https://w3id.org/biolink/biolinkml/meta/types/String> .
+
+<https://w3id.org/exampleTYPE> a owl:ObjectProperty,
+        meta:SlotDefinition ;
+    rdfs:label "TYPE" ;
+    rdfs:range <http://UNKNOWN.org/TYPE_enum> ;
+    meta:examples "Example(value='owl:NamedIndividual', description=None)" .
+
+<https://w3id.org/exampleLabel> a owl:ObjectProperty,
+        meta:SlotDefinition ;
+    rdfs:label "Label" ;
+    rdfs:range <https://w3id.org/biolink/biolinkml/meta/types/String> ;
+    meta:examples "Example(value='VISp_ALM 133 - CS201810310_133', description=None)" .
+
+meta:topValue a owl:DatatypeProperty ;
+    rdfs:label "value" .
+
+<https://w3id.org/exampleID> a owl:ObjectProperty,
+        meta:SlotDefinition ;
+    rdfs:label "ID" ;
+    rdfs:range <https://w3id.org/exampleAllenDendIdentifier> ;
+    meta:examples "Example(value='AllenDend:CS201810310_133', description=None)" .
+
+meta:ClassDefinition a owl:Class ;
+    rdfs:label "class_definition" ;
+    skos:definition "the definition of a class or interface" .
+
+<https://w3id.org/exampleEnsemblIdentifier> a owl:Class,
+        meta:TypeDefinition ;
+    rdfs:label "ensembl identifier" ;
+    rdfs:subClassOf <https://w3id.org/biolink/biolinkml/meta/types/String> .
+
+meta:TypeDefinition a owl:Class ;
+    rdfs:label "type_definition" ;
+    skos:definition "A data type definition." .
+
+<https://w3id.org/exampleAllenDendIdentifier> a owl:Class,
+        meta:TypeDefinition ;
+    rdfs:label "AllenDend identifier" ;
+    rdfs:subClassOf <https://w3id.org/biolink/biolinkml/meta/types/String> .
+
+meta:SlotDefinition a owl:Class ;
+    rdfs:label "slot_definition" ;
+    skos:definition "the definition of a property or a slot" .
+
+<https://w3id.org/biolink/biolinkml/meta/types/String> a owl:Class,
+        meta:TypeDefinition ;
+    rdfs:label "string" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty meta:topValue ;
+            owl:qualifiedCardinality 1 ] ;
+    skos:definition "A character string" .
+
+
+

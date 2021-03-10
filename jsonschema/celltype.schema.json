@@ -1,0 +1,589 @@
+{
+   "$id": "https://w3id.org/example",
+   "$schema": "http://json-schema.org/draft-07/schema#",
+   "definitions": {
+      "CCN201810310": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "Entity_Type": {
+               "type": "string"
+            },
+            "Function": {
+               "type": "string"
+            },
+            "ID": {
+               "type": "string"
+            },
+            "Label": {
+               "type": "string"
+            },
+            "Metadata": {
+               "type": "string"
+            },
+            "PrefLabel": {
+               "type": "string"
+            },
+            "Property_Assertions": {
+               "type": "string"
+            },
+            "Synonyms": {
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            },
+            "TYPE": {
+               "type": "string"
+            },
+            "cell_set_additional_aliases": {
+               "type": "string"
+            },
+            "cell_set_alias_assignee": {
+               "type": "string"
+            },
+            "cell_set_alias_citation": {
+               "type": "string"
+            },
+            "cell_set_aligned_alias": {
+               "type": "string"
+            },
+            "cell_set_label": {
+               "type": "string"
+            },
+            "cell_set_preferred_alias": {
+               "type": "string"
+            },
+            "original_label": {
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "CCN201810310",
+         "type": "object"
+      },
+      "CCN201810310Class": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "Classification": {
+               "type": "string"
+            },
+            "Classification_comment": {
+               "type": "string"
+            },
+            "Classification_pub": {
+               "type": "string"
+            },
+            "Comment": {
+               "type": "string"
+            },
+            "Curated_synonyms": {
+               "type": "string"
+            },
+            "ID": {
+               "type": "string"
+            },
+            "Label": {
+               "type": "string"
+            },
+            "Synonyms_from_taxonomy": {
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            }
+         },
+         "required": [],
+         "title": "CCN201810310Class",
+         "type": "object"
+      },
+      "CCN201810310EquivalentReification": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "Exemplar": {
+               "type": "string"
+            },
+            "ID": {
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "CCN201810310EquivalentReification",
+         "type": "object"
+      },
+      "CCN201810310Markers": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {},
+         "required": [],
+         "title": "CCN201810310Markers",
+         "type": "object"
+      },
+      "CCN201908210": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "Entity_Type": {
+               "type": "string"
+            },
+            "Function": {
+               "type": "string"
+            },
+            "ID": {
+               "type": "string"
+            },
+            "Label": {
+               "type": "string"
+            },
+            "Metadata": {
+               "type": "string"
+            },
+            "PrefLabel": {
+               "type": "string"
+            },
+            "Property_Assertions": {
+               "type": "string"
+            },
+            "Synonyms": {
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            },
+            "TYPE": {
+               "type": "string"
+            },
+            "cell_set_additional_aliases": {
+               "type": "string"
+            },
+            "cell_set_alias_assignee": {
+               "type": "string"
+            },
+            "cell_set_alias_citation": {
+               "type": "string"
+            },
+            "cell_set_aligned_alias": {
+               "type": "string"
+            },
+            "cell_set_label": {
+               "type": "string"
+            },
+            "cell_set_preferred_alias": {
+               "type": "string"
+            },
+            "original_label": {
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "CCN201908210",
+         "type": "object"
+      },
+      "CCN201908210Class": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "Classification": {
+               "type": "string"
+            },
+            "Classification_comment": {
+               "type": "string"
+            },
+            "Classification_pub": {
+               "type": "string"
+            },
+            "Comment": {
+               "type": "string"
+            },
+            "Curated_synonyms": {
+               "type": "string"
+            },
+            "ID": {
+               "type": "string"
+            },
+            "Label": {
+               "type": "string"
+            },
+            "Synonyms_from_taxonomy": {
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            }
+         },
+         "required": [],
+         "title": "CCN201908210Class",
+         "type": "object"
+      },
+      "CCN201908210EquivalentReification": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "Exemplar": {
+               "type": "string"
+            },
+            "ID": {
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "CCN201908210EquivalentReification",
+         "type": "object"
+      },
+      "CCN201908210Markers": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {},
+         "required": [],
+         "title": "CCN201908210Markers",
+         "type": "object"
+      },
+      "CCN201908211": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "Entity_Type": {
+               "type": "string"
+            },
+            "Function": {
+               "type": "string"
+            },
+            "ID": {
+               "type": "string"
+            },
+            "Label": {
+               "type": "string"
+            },
+            "Metadata": {
+               "type": "string"
+            },
+            "PrefLabel": {
+               "type": "string"
+            },
+            "Property_Assertions": {
+               "type": "string"
+            },
+            "Synonyms": {
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            },
+            "TYPE": {
+               "type": "string"
+            },
+            "cell_set_additional_aliases": {
+               "type": "string"
+            },
+            "cell_set_alias_assignee": {
+               "type": "string"
+            },
+            "cell_set_alias_citation": {
+               "type": "string"
+            },
+            "cell_set_aligned_alias": {
+               "type": "string"
+            },
+            "cell_set_label": {
+               "type": "string"
+            },
+            "cell_set_preferred_alias": {
+               "type": "string"
+            },
+            "original_label": {
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "CCN201908211",
+         "type": "object"
+      },
+      "CCN201908211Class": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "Classification": {
+               "type": "string"
+            },
+            "Classification_comment": {
+               "type": "string"
+            },
+            "Classification_pub": {
+               "type": "string"
+            },
+            "Comment": {
+               "type": "string"
+            },
+            "Curated_synonyms": {
+               "type": "string"
+            },
+            "ID": {
+               "type": "string"
+            },
+            "Label": {
+               "type": "string"
+            },
+            "Synonyms_from_taxonomy": {
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            }
+         },
+         "required": [],
+         "title": "CCN201908211Class",
+         "type": "object"
+      },
+      "CCN201908211EquivalentReification": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "Exemplar": {
+               "type": "string"
+            },
+            "ID": {
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "CCN201908211EquivalentReification",
+         "type": "object"
+      },
+      "CCN201908211Markers": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {},
+         "required": [],
+         "title": "CCN201908211Markers",
+         "type": "object"
+      },
+      "CCN202002013": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "Entity_Type": {
+               "type": "string"
+            },
+            "Function": {
+               "type": "string"
+            },
+            "ID": {
+               "type": "string"
+            },
+            "Label": {
+               "type": "string"
+            },
+            "Metadata": {
+               "type": "string"
+            },
+            "PrefLabel": {
+               "type": "string"
+            },
+            "Property_Assertions": {
+               "type": "string"
+            },
+            "Synonyms": {
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            },
+            "TYPE": {
+               "type": "string"
+            },
+            "cell_set_additional_aliases": {
+               "type": "string"
+            },
+            "cell_set_alias_assignee": {
+               "type": "string"
+            },
+            "cell_set_alias_citation": {
+               "type": "string"
+            },
+            "cell_set_aligned_alias": {
+               "type": "string"
+            },
+            "cell_set_label": {
+               "type": "string"
+            },
+            "cell_set_preferred_alias": {
+               "type": "string"
+            },
+            "original_label": {
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "CCN202002013",
+         "type": "object"
+      },
+      "CCN202002013Class": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "Classification": {
+               "type": "string"
+            },
+            "Classification_comment": {
+               "type": "string"
+            },
+            "Classification_pub": {
+               "type": "string"
+            },
+            "Comment": {
+               "type": "string"
+            },
+            "Curated_synonyms": {
+               "type": "string"
+            },
+            "ID": {
+               "type": "string"
+            },
+            "Label": {
+               "type": "string"
+            },
+            "Synonyms_from_taxonomy": {
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            }
+         },
+         "required": [],
+         "title": "CCN202002013Class",
+         "type": "object"
+      },
+      "CCN202002013EquivalentMarkers": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "Brain_region": {
+               "type": "string"
+            },
+            "CLASS_TYPE": {
+               "type": "string"
+            },
+            "Evidence": {
+               "type": "string"
+            },
+            "Gross_cell_type": {
+               "type": "string"
+            },
+            "ID": {
+               "type": "string"
+            },
+            "Marker1": {
+               "type": "string"
+            },
+            "Marker2": {
+               "type": "string"
+            },
+            "Marker3": {
+               "type": "string"
+            },
+            "Marker4": {
+               "type": "string"
+            },
+            "Marker5": {
+               "type": "string"
+            },
+            "Marker6": {
+               "type": "string"
+            },
+            "Marker7": {
+               "type": "string"
+            },
+            "Marker8": {
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "CCN202002013EquivalentMarkers",
+         "type": "object"
+      },
+      "CCN202002013EquivalentReification": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "Exemplar": {
+               "type": "string"
+            },
+            "ID": {
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "CCN202002013EquivalentReification",
+         "type": "object"
+      },
+      "CCN202002013Markers": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "Evidence_-_pub": {
+               "type": "string"
+            },
+            "Expresses": {
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            },
+            "ID": {
+               "type": "string"
+            },
+            "TYPE": {
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "CCN202002013Markers",
+         "type": "object"
+      },
+      "CS202002013MarkersDenormalized": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "Markers_Delimited": {
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            },
+            "Taxonomy_node_ID": {
+               "type": "string"
+            },
+            "clusterName": {
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "CS202002013MarkersDenormalized",
+         "type": "object"
+      },
+      "Ensmusg": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "ID": {
+               "type": "string"
+            },
+            "NAME": {
+               "type": "string"
+            },
+            "TYPE": {
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "Ensmusg",
+         "type": "object"
+      }
+   },
+   "properties": {},
+   "title": "example",
+   "type": "object"
+}
+

@@ -1,0 +1,418 @@
+id: https://w3id.org/example
+name: example
+description: example
+imports:
+- biolinkml:types
+prefixes:
+  biolinkml: https://w3id.org/biolink/biolinkml/
+  example: https://w3id.org/example
+default_prefix: example
+types:
+  AllenDend identifier:
+    typeof: string
+  BDSHELP identifier:
+    typeof: string
+  owl identifier:
+    typeof: string
+  identifier:
+    typeof: string
+  http identifier:
+    typeof: string
+  cell_set_preferred_alias identifier:
+    typeof: string
+  CL identifier:
+    typeof: string
+  UBERON identifier:
+    typeof: string
+  ensembl identifier:
+    typeof: string
+  doi identifier:
+    typeof: string
+  SO identifier:
+    typeof: string
+classes:
+  CCN201810310:
+    slots:
+    - ID
+    - Label
+    - PrefLabel
+    - Entity Type
+    - TYPE
+    - Property Assertions
+    - Synonyms
+    - Function
+    - cell_set_preferred_alias
+    - original_label
+    - cell_set_label
+    - cell_set_aligned_alias
+    - cell_set_additional_aliases
+    - cell_set_alias_assignee
+    - cell_set_alias_citation
+    - Metadata
+  CCN201810310_class:
+    slots:
+    - ID
+    - Label
+    - Synonyms_from_taxonomy
+    - Curated_synonyms
+    - Comment
+    - Classification
+    - Classification_comment
+    - Classification_pub
+  CCN201810310_equivalent_reification:
+    slots:
+    - ID
+    - Exemplar
+  CCN201810310_markers:
+    slots: []
+  CCN201908210:
+    slots:
+    - ID
+    - Label
+    - PrefLabel
+    - Entity Type
+    - TYPE
+    - Property Assertions
+    - Synonyms
+    - Function
+    - cell_set_preferred_alias
+    - original_label
+    - cell_set_label
+    - cell_set_aligned_alias
+    - cell_set_additional_aliases
+    - cell_set_alias_assignee
+    - cell_set_alias_citation
+    - Metadata
+  CCN201908210_class:
+    slots:
+    - ID
+    - Label
+    - Synonyms_from_taxonomy
+    - Curated_synonyms
+    - Comment
+    - Classification
+    - Classification_comment
+    - Classification_pub
+  CCN201908210_equivalent_reification:
+    slots:
+    - ID
+    - Exemplar
+  CCN201908210_markers:
+    slots: []
+  CCN201908211:
+    slots:
+    - ID
+    - Label
+    - PrefLabel
+    - Entity Type
+    - TYPE
+    - Property Assertions
+    - Synonyms
+    - Function
+    - cell_set_preferred_alias
+    - original_label
+    - cell_set_label
+    - cell_set_aligned_alias
+    - cell_set_additional_aliases
+    - cell_set_alias_assignee
+    - cell_set_alias_citation
+    - Metadata
+  CCN201908211_class:
+    slots:
+    - ID
+    - Label
+    - Synonyms_from_taxonomy
+    - Curated_synonyms
+    - Comment
+    - Classification
+    - Classification_comment
+    - Classification_pub
+  CCN201908211_equivalent_reification:
+    slots:
+    - ID
+    - Exemplar
+  CCN201908211_markers:
+    slots: []
+  CCN202002013:
+    slots:
+    - ID
+    - Label
+    - PrefLabel
+    - Entity Type
+    - TYPE
+    - Property Assertions
+    - Synonyms
+    - Function
+    - cell_set_preferred_alias
+    - original_label
+    - cell_set_label
+    - cell_set_aligned_alias
+    - cell_set_additional_aliases
+    - cell_set_alias_assignee
+    - cell_set_alias_citation
+    - Metadata
+  CCN202002013_class:
+    slots:
+    - ID
+    - Label
+    - Synonyms_from_taxonomy
+    - Curated_synonyms
+    - Comment
+    - Classification
+    - Classification_comment
+    - Classification_pub
+  CCN202002013_equivalent_markers:
+    slots:
+    - ID
+    - CLASS_TYPE
+    - Evidence
+    - Gross_cell_type
+    - Brain_region
+    - Marker1
+    - Marker2
+    - Marker3
+    - Marker4
+    - Marker5
+    - Marker6
+    - Marker7
+    - Marker8
+  CCN202002013_equivalent_reification:
+    slots:
+    - ID
+    - Exemplar
+  CCN202002013_markers:
+    slots:
+    - ID
+    - TYPE
+    - Expresses
+    - Evidence - pub
+  CS202002013_markers_denormalized:
+    slots:
+    - Taxonomy_node_ID
+    - clusterName
+    - Markers Delimited
+  ensmusg:
+    slots:
+    - ID
+    - TYPE
+    - NAME
+slots:
+  ID:
+    range: AllenDend identifier
+    examples:
+      value: AllenDend:CS201810310_133
+  Label:
+    range: string
+    examples:
+      value: VISp_ALM 133 - CS201810310_133
+  PrefLabel:
+    range: string
+    examples:
+      value: Microglia Siglech - CS201810310_133
+  Entity Type:
+    range: BDSHELP identifier
+    examples:
+      value: BDSHELP:Cluster
+  TYPE:
+    range: TYPE_enum
+    examples:
+      value: owl:NamedIndividual
+  Property Assertions:
+    range: AllenDend identifier
+    examples:
+      value: AllenDend:CS201810310_253
+  Synonyms:
+    range: string
+    examples:
+      value: Microglia Siglech|Microglia
+    multivalued: true
+  Function:
+    range: Function_enum
+  cell_set_preferred_alias:
+    range: string
+    examples:
+      value: Microglia Siglech
+  original_label:
+    range: string
+    examples:
+      value: Microglia Siglech
+  cell_set_label:
+    range: string
+    examples:
+      value: VISp_ALM 133
+  cell_set_aligned_alias:
+    range: string
+    examples:
+      value: Microglia
+  cell_set_additional_aliases:
+    range: cell_set_additional_aliases_enum
+    examples:
+      value: Cajal Retzius
+  cell_set_alias_assignee:
+    range: cell_set_alias_assignee_enum
+    examples:
+      value: Bosiljka Tasic
+  cell_set_alias_citation:
+    range: cell_set_alias_citation_enum
+    examples:
+      value: 10.1038/s41586-018-0654-5
+  Metadata:
+    range: identifier
+    examples:
+      value: '{"label": "Microglia Siglech", "members": 1, "height": 0, "leaf": true,
+        "edgePar.col": "#000000", "edgePar.lwd": 2, "edgePar.conf": 1, "nodePar.lab.cex":
+        0.7, "nodePar.pch": 19, "nodePar.lab.col": "#598069", "nodePar.cex": 0.5,
+        "nodePar.col": "#598069", "value": 133, "cell_set_accession": "CS201810310_133",
+        "original_label": "Microglia Siglech", "cell_set_label": "VISp_ALM 133", "cell_set_alias":
+        "Microglia Siglech", "cell_set_alt_alias": "Microglia", "cell_set_preferred_alias":
+        "Microglia Siglech", "cell_set_aligned_alias": "Microglia", "cell_set_additional_aliases":
+        "", "cell_set_structure": "neocortex", "cell_set_ontology_tag": "UBERON_0001950",
+        "cell_set_alias_assignee": "Bosiljka Tasic", "cell_set_alias_citation": "10.1038/s41586-018-0654-5",
+        "taxonomy_id": "CCN201810310", "_row": "Microglia Siglech", "is_leaf": true}'
+  Synonyms_from_taxonomy:
+    range: string
+    examples:
+      value: Microglia|VISp_ALM 133|Microglia Siglech
+    multivalued: true
+  Curated_synonyms:
+    range: Curated_synonyms_enum
+  Comment:
+    range: cell_set_preferred_alias identifier
+    examples:
+      value: cell_set_preferred_alias:Microglia Siglech ; original_label:Microglia
+        Siglech ; cell_set_label:VISp_ALM 133 ; cell_set_aligned_alias:Microglia ;
+        cell_set_additional_aliases:''
+  Classification:
+    range: Classification_enum
+  Classification_comment:
+    range: Classification_comment_enum
+  Classification_pub:
+    range: Classification_pub_enum
+  Exemplar:
+    range: AllenDend identifier
+    examples:
+      value: AllenDend:CS201810310_133
+  CLASS_TYPE:
+    range: CLASS_TYPE_enum
+    examples:
+      value: equivalent
+  Evidence:
+    range: http identifier
+    examples:
+      value: http://www.semanticweb.org/brain_data_standards/AllenDend_CS202002013_88
+  Gross_cell_type:
+    range: CL identifier
+    examples:
+      value: CL:0000679
+  Brain_region:
+    range: UBERON identifier
+    examples:
+      value: UBERON:0001384
+  Marker1:
+    range: ensembl identifier
+    examples:
+      value: ensembl:ENSMUSG00000047907
+  Marker2:
+    range: ensembl identifier
+    examples:
+      value: ensembl:ENSMUSG00000004151
+  Marker3:
+    range: ensembl identifier
+    examples:
+      value: ensembl:ENSMUSG00000026344
+  Marker4:
+    range: ensembl identifier
+    examples:
+      value: ensembl:ENSMUSG00000035258
+  Marker5:
+    range: ensembl identifier
+    examples:
+      value: ensembl:ENSMUSG00000004151
+  Marker6:
+    range: ensembl identifier
+    examples:
+      value: ensembl:ENSMUSG00000096972
+  Marker7:
+    range: ensembl identifier
+    examples:
+      value: ensembl:ENSMUSG00000055214
+  Marker8:
+    range: ensembl identifier
+    examples:
+      value: ensembl:ENSMUSG00000040452
+  Expresses:
+    range: ensembl identifier
+    examples:
+      value: ensembl:ENSMUSG00000049796|ensembl:ENSMUSG00000022656|ensembl:ENSMUSG00000020099
+    multivalued: true
+  Evidence - pub:
+    range: doi identifier
+    examples:
+      value: doi:10.1101/2020.09.23.308932
+  Taxonomy_node_ID:
+    range: string
+    examples:
+      value: CS202002013_14
+  clusterName:
+    range: string
+    examples:
+      value: Vip Sncg
+  Markers Delimited:
+    range: ensembl identifier
+    examples:
+      value: ensembl:ENSMUSG00000058897|ensembl:ENSMUSG00000022656|ensembl:ENSMUSG00000044288|ensembl:ENSMUSG00000049796|ensembl:ENSMUSG00000020099
+    multivalued: true
+  NAME:
+    range: string
+    examples:
+      value: Gm23444
+enums:
+  TYPE_enum:
+    permissible_values:
+      owl:NamedIndividual:
+        description: owl:NamedIndividual
+  Function_enum:
+    permissible_values: {}
+  cell_set_additional_aliases_enum:
+    permissible_values:
+      Neuronal:
+        description: Neuronal
+      Lamp5 Rosehip:
+        description: Lamp5 Rosehip
+      L6:
+        description: L6
+      L5 IT (ALM):
+        description: L5 IT (ALM)
+      L5 PT:
+        description: L5 PT
+      Cajal Retzius:
+        description: Cajal Retzius
+      L5 IT (VISp):
+        description: L5 IT (VISp)
+      L6 IT (ALM):
+        description: L6 IT (ALM)
+      Serpinf1:
+        description: Serpinf1
+      L6 IT (VISp):
+        description: L6 IT (VISp)
+  cell_set_alias_assignee_enum:
+    permissible_values:
+      Bosiljka Tasic:
+        description: Bosiljka Tasic
+  cell_set_alias_citation_enum:
+    permissible_values:
+      10.1038/s41586-018-0654-5:
+        description: 10.1038/s41586-018-0654-5
+  Curated_synonyms_enum:
+    permissible_values: {}
+  Classification_enum:
+    permissible_values: {}
+  Classification_comment_enum:
+    permissible_values: {}
+  Classification_pub_enum:
+    permissible_values: {}
+  CLASS_TYPE_enum:
+    permissible_values:
+      equivalent:
+        description: equivalent
+

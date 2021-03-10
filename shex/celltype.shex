@@ -1,0 +1,314 @@
+BASE <https://w3id.org/example/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX metatype: <https://w3id.org/biolink/biolinkml/meta/types/>
+
+
+<https://w3id.org/exampleAllenDendIdentifier> xsd:string
+
+<https://w3id.org/exampleBDSHELPIdentifier> xsd:string
+
+<https://w3id.org/exampleOwlIdentifier> xsd:string
+
+<https://w3id.org/exampleIdentifier> xsd:string
+
+<https://w3id.org/exampleHttpIdentifier> xsd:string
+
+<https://w3id.org/exampleCellSetPreferredAliasIdentifier> xsd:string
+
+<https://w3id.org/exampleCLIdentifier> xsd:string
+
+<https://w3id.org/exampleUBERONIdentifier> xsd:string
+
+<https://w3id.org/exampleEnsemblIdentifier> xsd:string
+
+<https://w3id.org/exampleDoiIdentifier> xsd:string
+
+<https://w3id.org/exampleSOIdentifier> xsd:string
+
+metatype:String xsd:string
+
+metatype:Integer xsd:integer
+
+metatype:Boolean xsd:boolean
+
+metatype:Float xsd:float
+
+metatype:Double xsd:double
+
+metatype:Decimal xsd:decimal
+
+metatype:Time xsd:dateTime
+
+metatype:Date xsd:date
+
+metatype:Datetime xsd:dateTime
+
+metatype:Uriorcurie IRI
+
+metatype:Uri IRI
+
+metatype:Ncname xsd:string
+
+metatype:Objectidentifier IRI
+
+metatype:Nodeidentifier NONLITERAL
+
+<https://w3id.org/exampleCCN201810310> CLOSED {
+    (  $<https://w3id.org/exampleCCN201810310_tes> (  <https://w3id.org/exampleID> @<https://w3id.org/exampleAllenDendIdentifier> ?
+          ;
+          <https://w3id.org/exampleLabel> @metatype:String ? ;
+          <https://w3id.org/examplePrefLabel> @metatype:String ? ;
+          <https://w3id.org/exampleEntity_Type> @<https://w3id.org/exampleBDSHELPIdentifier> ? ;
+          <https://w3id.org/exampleTYPE> @<https://w3id.org/exampleTYPEEnum> ? ;
+          <https://w3id.org/exampleProperty_Assertions> @<https://w3id.org/exampleAllenDendIdentifier> ? ;
+          <https://w3id.org/exampleSynonyms> @metatype:String * ;
+          <https://w3id.org/exampleFunction> @<https://w3id.org/exampleFunctionEnum> ? ;
+          <https://w3id.org/examplecell_set_preferred_alias> @metatype:String ? ;
+          <https://w3id.org/exampleoriginal_label> @metatype:String ? ;
+          <https://w3id.org/examplecell_set_label> @metatype:String ? ;
+          <https://w3id.org/examplecell_set_aligned_alias> @metatype:String ? ;
+          <https://w3id.org/examplecell_set_additional_aliases> @<https://w3id.org/exampleCellSetAdditionalAliasesEnum> ? ;
+          <https://w3id.org/examplecell_set_alias_assignee> @<https://w3id.org/exampleCellSetAliasAssigneeEnum> ? ;
+          <https://w3id.org/examplecell_set_alias_citation> @<https://w3id.org/exampleCellSetAliasCitationEnum> ? ;
+          <https://w3id.org/exampleMetadata> @<https://w3id.org/exampleIdentifier> ?
+       ) ;
+       rdf:type [ <https://w3id.org/exampleCCN201810310> ] ?
+    )
+}
+
+<https://w3id.org/exampleCCN201810310Class> CLOSED {
+    (  $<https://w3id.org/exampleCCN201810310Class_tes> (  <https://w3id.org/exampleID>
+          @<https://w3id.org/exampleAllenDendIdentifier> ? ;
+          <https://w3id.org/exampleLabel> @metatype:String ? ;
+          <https://w3id.org/exampleSynonyms_from_taxonomy> @metatype:String * ;
+          <https://w3id.org/exampleCurated_synonyms> @<https://w3id.org/exampleCuratedSynonymsEnum> ? ;
+          <https://w3id.org/exampleComment> @<https://w3id.org/exampleCellSetPreferredAliasIdentifier> ? ;
+          <https://w3id.org/exampleClassification> @<https://w3id.org/exampleClassificationEnum> ? ;
+          <https://w3id.org/exampleClassification_comment> @<https://w3id.org/exampleClassificationCommentEnum> ? ;
+          <https://w3id.org/exampleClassification_pub> @<https://w3id.org/exampleClassificationPubEnum> ?
+       ) ;
+       rdf:type [ <https://w3id.org/exampleCCN201810310Class> ] ?
+    )
+}
+
+<https://w3id.org/exampleCCN201810310EquivalentReification> CLOSED {
+    (  $<https://w3id.org/exampleCCN201810310EquivalentReification_tes> (  <https://w3id.org/exampleID>
+          @<https://w3id.org/exampleAllenDendIdentifier> ? ;
+          <https://w3id.org/exampleExemplar> @<https://w3id.org/exampleAllenDendIdentifier> ?
+       ) ;
+       rdf:type [ <https://w3id.org/exampleCCN201810310EquivalentReification> ] ?
+    )
+}
+
+<https://w3id.org/exampleCCN201810310Markers> CLOSED {
+    (  $<https://w3id.org/exampleCCN201810310Markers_tes> rdf:type . * ;
+       rdf:type [ <https://w3id.org/exampleCCN201810310Markers> ] ?
+    )
+}
+
+<https://w3id.org/exampleCCN201908210> CLOSED {
+    (  $<https://w3id.org/exampleCCN201908210_tes> (  <https://w3id.org/exampleID> @<https://w3id.org/exampleAllenDendIdentifier> ?
+          ;
+          <https://w3id.org/exampleLabel> @metatype:String ? ;
+          <https://w3id.org/examplePrefLabel> @metatype:String ? ;
+          <https://w3id.org/exampleEntity_Type> @<https://w3id.org/exampleBDSHELPIdentifier> ? ;
+          <https://w3id.org/exampleTYPE> @<https://w3id.org/exampleTYPEEnum> ? ;
+          <https://w3id.org/exampleProperty_Assertions> @<https://w3id.org/exampleAllenDendIdentifier> ? ;
+          <https://w3id.org/exampleSynonyms> @metatype:String * ;
+          <https://w3id.org/exampleFunction> @<https://w3id.org/exampleFunctionEnum> ? ;
+          <https://w3id.org/examplecell_set_preferred_alias> @metatype:String ? ;
+          <https://w3id.org/exampleoriginal_label> @metatype:String ? ;
+          <https://w3id.org/examplecell_set_label> @metatype:String ? ;
+          <https://w3id.org/examplecell_set_aligned_alias> @metatype:String ? ;
+          <https://w3id.org/examplecell_set_additional_aliases> @<https://w3id.org/exampleCellSetAdditionalAliasesEnum> ? ;
+          <https://w3id.org/examplecell_set_alias_assignee> @<https://w3id.org/exampleCellSetAliasAssigneeEnum> ? ;
+          <https://w3id.org/examplecell_set_alias_citation> @<https://w3id.org/exampleCellSetAliasCitationEnum> ? ;
+          <https://w3id.org/exampleMetadata> @<https://w3id.org/exampleIdentifier> ?
+       ) ;
+       rdf:type [ <https://w3id.org/exampleCCN201908210> ] ?
+    )
+}
+
+<https://w3id.org/exampleCCN201908210Class> CLOSED {
+    (  $<https://w3id.org/exampleCCN201908210Class_tes> (  <https://w3id.org/exampleID>
+          @<https://w3id.org/exampleAllenDendIdentifier> ? ;
+          <https://w3id.org/exampleLabel> @metatype:String ? ;
+          <https://w3id.org/exampleSynonyms_from_taxonomy> @metatype:String * ;
+          <https://w3id.org/exampleCurated_synonyms> @<https://w3id.org/exampleCuratedSynonymsEnum> ? ;
+          <https://w3id.org/exampleComment> @<https://w3id.org/exampleCellSetPreferredAliasIdentifier> ? ;
+          <https://w3id.org/exampleClassification> @<https://w3id.org/exampleClassificationEnum> ? ;
+          <https://w3id.org/exampleClassification_comment> @<https://w3id.org/exampleClassificationCommentEnum> ? ;
+          <https://w3id.org/exampleClassification_pub> @<https://w3id.org/exampleClassificationPubEnum> ?
+       ) ;
+       rdf:type [ <https://w3id.org/exampleCCN201908210Class> ] ?
+    )
+}
+
+<https://w3id.org/exampleCCN201908210EquivalentReification> CLOSED {
+    (  $<https://w3id.org/exampleCCN201908210EquivalentReification_tes> (  <https://w3id.org/exampleID>
+          @<https://w3id.org/exampleAllenDendIdentifier> ? ;
+          <https://w3id.org/exampleExemplar> @<https://w3id.org/exampleAllenDendIdentifier> ?
+       ) ;
+       rdf:type [ <https://w3id.org/exampleCCN201908210EquivalentReification> ] ?
+    )
+}
+
+<https://w3id.org/exampleCCN201908210Markers> CLOSED {
+    (  $<https://w3id.org/exampleCCN201908210Markers_tes> rdf:type . * ;
+       rdf:type [ <https://w3id.org/exampleCCN201908210Markers> ] ?
+    )
+}
+
+<https://w3id.org/exampleCCN201908211> CLOSED {
+    (  $<https://w3id.org/exampleCCN201908211_tes> (  <https://w3id.org/exampleID> @<https://w3id.org/exampleAllenDendIdentifier> ?
+          ;
+          <https://w3id.org/exampleLabel> @metatype:String ? ;
+          <https://w3id.org/examplePrefLabel> @metatype:String ? ;
+          <https://w3id.org/exampleEntity_Type> @<https://w3id.org/exampleBDSHELPIdentifier> ? ;
+          <https://w3id.org/exampleTYPE> @<https://w3id.org/exampleTYPEEnum> ? ;
+          <https://w3id.org/exampleProperty_Assertions> @<https://w3id.org/exampleAllenDendIdentifier> ? ;
+          <https://w3id.org/exampleSynonyms> @metatype:String * ;
+          <https://w3id.org/exampleFunction> @<https://w3id.org/exampleFunctionEnum> ? ;
+          <https://w3id.org/examplecell_set_preferred_alias> @metatype:String ? ;
+          <https://w3id.org/exampleoriginal_label> @metatype:String ? ;
+          <https://w3id.org/examplecell_set_label> @metatype:String ? ;
+          <https://w3id.org/examplecell_set_aligned_alias> @metatype:String ? ;
+          <https://w3id.org/examplecell_set_additional_aliases> @<https://w3id.org/exampleCellSetAdditionalAliasesEnum> ? ;
+          <https://w3id.org/examplecell_set_alias_assignee> @<https://w3id.org/exampleCellSetAliasAssigneeEnum> ? ;
+          <https://w3id.org/examplecell_set_alias_citation> @<https://w3id.org/exampleCellSetAliasCitationEnum> ? ;
+          <https://w3id.org/exampleMetadata> @<https://w3id.org/exampleIdentifier> ?
+       ) ;
+       rdf:type [ <https://w3id.org/exampleCCN201908211> ] ?
+    )
+}
+
+<https://w3id.org/exampleCCN201908211Class> CLOSED {
+    (  $<https://w3id.org/exampleCCN201908211Class_tes> (  <https://w3id.org/exampleID>
+          @<https://w3id.org/exampleAllenDendIdentifier> ? ;
+          <https://w3id.org/exampleLabel> @metatype:String ? ;
+          <https://w3id.org/exampleSynonyms_from_taxonomy> @metatype:String * ;
+          <https://w3id.org/exampleCurated_synonyms> @<https://w3id.org/exampleCuratedSynonymsEnum> ? ;
+          <https://w3id.org/exampleComment> @<https://w3id.org/exampleCellSetPreferredAliasIdentifier> ? ;
+          <https://w3id.org/exampleClassification> @<https://w3id.org/exampleClassificationEnum> ? ;
+          <https://w3id.org/exampleClassification_comment> @<https://w3id.org/exampleClassificationCommentEnum> ? ;
+          <https://w3id.org/exampleClassification_pub> @<https://w3id.org/exampleClassificationPubEnum> ?
+       ) ;
+       rdf:type [ <https://w3id.org/exampleCCN201908211Class> ] ?
+    )
+}
+
+<https://w3id.org/exampleCCN201908211EquivalentReification> CLOSED {
+    (  $<https://w3id.org/exampleCCN201908211EquivalentReification_tes> (  <https://w3id.org/exampleID>
+          @<https://w3id.org/exampleAllenDendIdentifier> ? ;
+          <https://w3id.org/exampleExemplar> @<https://w3id.org/exampleAllenDendIdentifier> ?
+       ) ;
+       rdf:type [ <https://w3id.org/exampleCCN201908211EquivalentReification> ] ?
+    )
+}
+
+<https://w3id.org/exampleCCN201908211Markers> CLOSED {
+    (  $<https://w3id.org/exampleCCN201908211Markers_tes> rdf:type . * ;
+       rdf:type [ <https://w3id.org/exampleCCN201908211Markers> ] ?
+    )
+}
+
+<https://w3id.org/exampleCCN202002013> CLOSED {
+    (  $<https://w3id.org/exampleCCN202002013_tes> (  <https://w3id.org/exampleID> @<https://w3id.org/exampleAllenDendIdentifier> ?
+          ;
+          <https://w3id.org/exampleLabel> @metatype:String ? ;
+          <https://w3id.org/examplePrefLabel> @metatype:String ? ;
+          <https://w3id.org/exampleEntity_Type> @<https://w3id.org/exampleBDSHELPIdentifier> ? ;
+          <https://w3id.org/exampleTYPE> @<https://w3id.org/exampleTYPEEnum> ? ;
+          <https://w3id.org/exampleProperty_Assertions> @<https://w3id.org/exampleAllenDendIdentifier> ? ;
+          <https://w3id.org/exampleSynonyms> @metatype:String * ;
+          <https://w3id.org/exampleFunction> @<https://w3id.org/exampleFunctionEnum> ? ;
+          <https://w3id.org/examplecell_set_preferred_alias> @metatype:String ? ;
+          <https://w3id.org/exampleoriginal_label> @metatype:String ? ;
+          <https://w3id.org/examplecell_set_label> @metatype:String ? ;
+          <https://w3id.org/examplecell_set_aligned_alias> @metatype:String ? ;
+          <https://w3id.org/examplecell_set_additional_aliases> @<https://w3id.org/exampleCellSetAdditionalAliasesEnum> ? ;
+          <https://w3id.org/examplecell_set_alias_assignee> @<https://w3id.org/exampleCellSetAliasAssigneeEnum> ? ;
+          <https://w3id.org/examplecell_set_alias_citation> @<https://w3id.org/exampleCellSetAliasCitationEnum> ? ;
+          <https://w3id.org/exampleMetadata> @<https://w3id.org/exampleIdentifier> ?
+       ) ;
+       rdf:type [ <https://w3id.org/exampleCCN202002013> ] ?
+    )
+}
+
+<https://w3id.org/exampleCCN202002013Class> CLOSED {
+    (  $<https://w3id.org/exampleCCN202002013Class_tes> (  <https://w3id.org/exampleID>
+          @<https://w3id.org/exampleAllenDendIdentifier> ? ;
+          <https://w3id.org/exampleLabel> @metatype:String ? ;
+          <https://w3id.org/exampleSynonyms_from_taxonomy> @metatype:String * ;
+          <https://w3id.org/exampleCurated_synonyms> @<https://w3id.org/exampleCuratedSynonymsEnum> ? ;
+          <https://w3id.org/exampleComment> @<https://w3id.org/exampleCellSetPreferredAliasIdentifier> ? ;
+          <https://w3id.org/exampleClassification> @<https://w3id.org/exampleClassificationEnum> ? ;
+          <https://w3id.org/exampleClassification_comment> @<https://w3id.org/exampleClassificationCommentEnum> ? ;
+          <https://w3id.org/exampleClassification_pub> @<https://w3id.org/exampleClassificationPubEnum> ?
+       ) ;
+       rdf:type [ <https://w3id.org/exampleCCN202002013Class> ] ?
+    )
+}
+
+<https://w3id.org/exampleCCN202002013EquivalentMarkers> CLOSED {
+    (  $<https://w3id.org/exampleCCN202002013EquivalentMarkers_tes> (  <https://w3id.org/exampleID>
+          @<https://w3id.org/exampleAllenDendIdentifier> ? ;
+          <https://w3id.org/exampleCLASS_TYPE> @<https://w3id.org/exampleCLASSTYPEEnum> ? ;
+          <https://w3id.org/exampleEvidence> @<https://w3id.org/exampleHttpIdentifier> ? ;
+          <https://w3id.org/exampleGross_cell_type> @<https://w3id.org/exampleCLIdentifier> ? ;
+          <https://w3id.org/exampleBrain_region> @<https://w3id.org/exampleUBERONIdentifier> ? ;
+          <https://w3id.org/exampleMarker1> @<https://w3id.org/exampleEnsemblIdentifier> ? ;
+          <https://w3id.org/exampleMarker2> @<https://w3id.org/exampleEnsemblIdentifier> ? ;
+          <https://w3id.org/exampleMarker3> @<https://w3id.org/exampleEnsemblIdentifier> ? ;
+          <https://w3id.org/exampleMarker4> @<https://w3id.org/exampleEnsemblIdentifier> ? ;
+          <https://w3id.org/exampleMarker5> @<https://w3id.org/exampleEnsemblIdentifier> ? ;
+          <https://w3id.org/exampleMarker6> @<https://w3id.org/exampleEnsemblIdentifier> ? ;
+          <https://w3id.org/exampleMarker7> @<https://w3id.org/exampleEnsemblIdentifier> ? ;
+          <https://w3id.org/exampleMarker8> @<https://w3id.org/exampleEnsemblIdentifier> ?
+       ) ;
+       rdf:type [ <https://w3id.org/exampleCCN202002013EquivalentMarkers> ] ?
+    )
+}
+
+<https://w3id.org/exampleCCN202002013EquivalentReification> CLOSED {
+    (  $<https://w3id.org/exampleCCN202002013EquivalentReification_tes> (  <https://w3id.org/exampleID>
+          @<https://w3id.org/exampleAllenDendIdentifier> ? ;
+          <https://w3id.org/exampleExemplar> @<https://w3id.org/exampleAllenDendIdentifier> ?
+       ) ;
+       rdf:type [ <https://w3id.org/exampleCCN202002013EquivalentReification> ] ?
+    )
+}
+
+<https://w3id.org/exampleCCN202002013Markers> CLOSED {
+    (  $<https://w3id.org/exampleCCN202002013Markers_tes> (  <https://w3id.org/exampleID>
+          @<https://w3id.org/exampleAllenDendIdentifier> ? ;
+          <https://w3id.org/exampleTYPE> @<https://w3id.org/exampleTYPEEnum> ? ;
+          <https://w3id.org/exampleExpresses> @<https://w3id.org/exampleEnsemblIdentifier> * ;
+          <https://w3id.org/exampleEvidence_-_pub> @<https://w3id.org/exampleDoiIdentifier> ?
+       ) ;
+       rdf:type [ <https://w3id.org/exampleCCN202002013Markers> ] ?
+    )
+}
+
+<https://w3id.org/exampleCS202002013MarkersDenormalized> CLOSED {
+    (  $<https://w3id.org/exampleCS202002013MarkersDenormalized_tes> (  <https://w3id.org/exampleTaxonomy_node_ID> @metatype:String
+          ? ;
+          <https://w3id.org/exampleclusterName> @metatype:String ? ;
+          <https://w3id.org/exampleMarkers_Delimited> @<https://w3id.org/exampleEnsemblIdentifier> *
+       ) ;
+       rdf:type [ <https://w3id.org/exampleCS202002013MarkersDenormalized> ] ?
+    )
+}
+
+<https://w3id.org/exampleEnsmusg> CLOSED {
+    (  $<https://w3id.org/exampleEnsmusg_tes> (  <https://w3id.org/exampleID> @<https://w3id.org/exampleAllenDendIdentifier> ? ;
+          <https://w3id.org/exampleTYPE> @<https://w3id.org/exampleTYPEEnum> ? ;
+          <https://w3id.org/exampleNAME> @metatype:String ?
+       ) ;
+       rdf:type [ <https://w3id.org/exampleEnsmusg> ] ?
+    )
+}
+
+
+
